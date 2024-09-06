@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div>
+    </div>
+    <div class="back">
+
+        <div class="container">
+            <div class="sub-container">
+                <h1>My To-<span style="color: white;">Do</span> List</h1>
+
+                <form id="taskForm" method="post">
+                    <input type="text" id="taskInput" name="task" placeholder="Enter your task here" required>
+                    <button type="submit">Add</button>
+                </form>
+
+                <ul id="taskList">
+                    {% for task in tasks %}
+                    <li id="task-{{ task.id }}">
+
+                        <input type="checkbox" id="checkbox-{{ task.id }}">
+                        <p id="taskText-{{task.id}}">{{ task.task }}</p>
+
+                        <form action="/delete_task" method="post" style="display:inline;">
+                            <input type="hidden" name="task_id" value="{{ task.id }}">
+                            <button id="delete" type="submit">Delete</button>
+                        </form>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

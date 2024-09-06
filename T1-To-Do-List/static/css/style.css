@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    background-image: radial-gradient(#3c3c3c, #b53b3b, #3c3c3c);
+    background-size: 200% 300%;
+    animation: flow 5s ease infinite;
+
+    @keyframes flow {
+        0% {
+            background-color: #b53b3b;
+        }
+
+        50% {
+            background-color: #b53b3b;
+        }
+
+        100% {
+            background-color: #b53b3b;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.sub-container {
+    background-color: #3c3c3c;
+    border-radius: 5px;
+    margin: 0.5rem;
+    margin-top: 7rem;
+    padding: 2rem;
+    width: 30rem;
+    z-index: 1;
+}
+
+h1 {
+    margin: 0 0 1rem 0;
+    text-align: center;
+    color: #b53b3b;
+}
+
+form {
+    display: flex;
+}
+
+form input {
+
+    color: #b53b3b;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #b53b3b;
+    border-radius: 5px;
+    width: 100%;
+    height: 3rem;
+    margin: 0.2rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 1px 0px 1px 10px;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+
+form button {
+    width: 6rem;
+    height: 3.3rem;
+    margin: 0.2rem;
+    color: #b53b3b;
+    background-color: white;
+    border: 1px solid #b53b3b;
+    border-radius: 5px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    font-weight: bold;
+    margin: 3px 0 3px 3px;
+    padding: 0px 0px 0px 0px;
+    border: 1px solid #b53b3b;
+    border-radius: 5px;
+    background-color: #b53b3b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li p {
+    margin: 0;
+    color: white;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+ul li p.line-through {
+    color: #3c3c3c;
+    text-decoration: line-through;
+}
+
+#taskList form button {
+    width: 5rem;
+}
+
+#taskList input[type="checkbox"] {
+    width: 2rem;
+    height: 1rem;
+
+}
